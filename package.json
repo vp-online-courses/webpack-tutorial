@@ -31,6 +31,7 @@
   "dependencies": {
     "babel-preset-stage-0": "^6.24.1",
     "handlebars": "^4.0.11",
-    "handlebars-loader": "^1.7.0"
+    "handlebars-loader": "^1.7.0",
+    "lodash": "^4.17.10"
   }
 }
