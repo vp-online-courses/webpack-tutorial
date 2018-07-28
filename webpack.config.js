@@ -41,6 +41,12 @@ module.exports = {
                         presets: [ 'stage-0' ]
                     }
                 }
+            },
+            {
+                test: /\.hbs$/,
+                use: [
+                    'handlebars-loader'
+                ]
             }
         ]
     },
@@ -51,7 +57,9 @@ module.exports = {
         }),
         new CleanWebpackPlugin('dist'),
         new HtmlWebpackPlugin({
-            title: 'Hello world'
+            title: 'Hello world',
+            template: 'src/index.hbs',
+            description: 'some description'
         })
     ]
 };
