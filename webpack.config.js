@@ -50,6 +50,8 @@ module.exports = {
             filename: 'styles.[contenthash].css'
         }),
         new CleanWebpackPlugin('dist'),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            title: 'Hello world'
+        })
     ]
 };
