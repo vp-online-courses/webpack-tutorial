@@ -4,7 +4,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: [
+        'font-awesome/scss/font-awesome.scss',
+        './src/index.js'
+    ],
     output: {
         filename: 'bundle.[contenthash].js',
         path: path.resolve(__dirname, './dist'),
@@ -53,6 +56,23 @@ module.exports = {
                 use: [
                     'handlebars-loader'
                 ]
+            },
+            {
+                test: /font-awesome\.config\.js/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'font-awesome-loader' }
+                ]
+            },
+            {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/',
+                    }
+                }]
             }
         ]
     },
