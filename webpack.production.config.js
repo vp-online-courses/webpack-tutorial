@@ -63,7 +63,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
-        new CleanWebpackPlugin('dist'),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'hello-world.html',
             chunks: ['hello-world', 'vendors~hello-world~kiwi'],
