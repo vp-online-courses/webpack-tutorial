@@ -14,7 +14,6 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
@@ -28,6 +27,7 @@
   },
   "dependencies": {
     "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^2.0.1",
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.7.0"
   }
