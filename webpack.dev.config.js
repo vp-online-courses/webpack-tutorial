@@ -49,7 +49,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin('dist'),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'Hello world',
             template: 'src/index.hbs',
