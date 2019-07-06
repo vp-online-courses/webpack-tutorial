@@ -44,7 +44,8 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: [ 'stage-0' ]
+                        presets: [ '@babel/env' ],
+                        plugins: [ 'transform-class-properties' ]
                     }
                 }
             },

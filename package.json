@@ -13,8 +13,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
@@ -30,8 +31,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "babel-preset-stage-0": "^6.24.1",
-    "express": "^4.16.3",
+    "express": "^4.17.1",
     "handlebars": "^4.1.2",
     "handlebars-loader": "^1.7.0",
     "lodash": "^4.17.11",
