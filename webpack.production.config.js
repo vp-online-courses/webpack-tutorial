@@ -67,14 +67,14 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'hello-world.html',
-            chunks: ['hello-world', 'vendors~hello-world~kiwi'],
+            chunks: ['hello-world', 'vendors_hello-world_kiwi'],
             title: 'Hello world',
             description: 'some description',
             template: 'src/page-template.hbs'
         }),
         new HtmlWebpackPlugin({
             filename: 'kiwi.html',
-            chunks: ['kiwi', 'vendors~hello-world~kiwi'],
+            chunks: ['kiwi', 'vendors_hello-world_kiwi'],
             title: 'Kiwi',
             description: 'Kiwi',
             template: 'src/page-template.hbs'
