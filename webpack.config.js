@@ -1,5 +1,5 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -37,14 +37,15 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: [ 'stage-0' ]
+                        presets: [ '@babel/env' ],
+                        plugins: [ 'transform-class-properties' ]
                     }
                 }
             }
         ]
     },
     plugins: [
-        new UglifyJsPlugin(),
+        new TerserPlugin(),
         new MiniCssExtractPlugin({
             filename: 'styles.[contenthash].css'
         }),
