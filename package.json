@@ -34,7 +34,7 @@
     "express": "^4.17.1",
     "handlebars": "^4.1.2",
     "handlebars-loader": "^1.7.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "react": "^16.4.2"
   }
 }
