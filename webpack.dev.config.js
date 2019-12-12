@@ -1,6 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -50,6 +51,20 @@ module.exports = {
                 use: [
                     'handlebars-loader'
                 ]
+            },
+            {
+                test: /\.svg$/i,
+            
+                include: /.*_sprite\.svg/,
+            
+                use: [
+                    {
+                        loader: 'svg-sprite-loader',
+                        options: {
+                            publicPath: '',
+                        }
+                    },
+                ],
             }
         ]
     },
@@ -59,6 +74,7 @@ module.exports = {
             title: 'Hello world',
             description: 'Hello world',
             template: 'src/page-template.hbs'
-        })
+        }),
+        new SpriteLoaderPlugin()
     ]
 };

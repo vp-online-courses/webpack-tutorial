@@ -1,3 +1,4 @@
+import symbol from '../../images/icons_sprite.svg';
 import './hello-world-button.scss';
 
 class HelloWorldButton {
@@ -12,6 +13,12 @@ class HelloWorldButton {
             p.innerHTML = 'Hello world';
             p.classList.add('hello-world-text');
             body.appendChild(p);
+
+            const html = `<svg class="icon-twitter" height="30px" width="30px">
+                <use xlink:href="#icons_sprite_icon-twitter"></use>
+            </svg>`;
+            const contentBox = document.body;
+            contentBox.insertAdjacentHTML('beforeend', html);
         }
         button.classList.add('hello-world-button');
         body.appendChild(button);
