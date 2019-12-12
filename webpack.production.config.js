@@ -57,9 +57,7 @@ module.exports = {
             },
             {
                 test: /\.svg$/i,
-            
                 include: /.*_sprite\.svg/,
-            
                 use: [
                     {
                         loader: 'svg-sprite-loader',
@@ -67,6 +65,14 @@ module.exports = {
                             publicPath: '',
                         }
                     },
+                    {
+                        loader: 'svgo-loader',
+                        options: {
+                            plugins: [
+                                { cleanupIDs: false },
+                            ]
+                        }
+                    }
                 ],
             }
         ]

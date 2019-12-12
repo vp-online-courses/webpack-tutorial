@@ -63,8 +63,8 @@ module.exports = {
                         options: {
                             publicPath: '',
                         }
-                    },
-                ],
+                    }
+                ]
             }
         ]
     },

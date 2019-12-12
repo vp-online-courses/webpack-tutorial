@@ -17,8 +17,7 @@ class HelloWorldButton {
             const html = `<svg class="icon-twitter" height="30px" width="30px">
                 <use xlink:href="#icons_sprite_icon-twitter"></use>
             </svg>`;
-            const contentBox = document.body;
-            contentBox.insertAdjacentHTML('beforeend', html);
+            document.body.insertAdjacentHTML('beforeend', html);
         }
         button.classList.add('hello-world-button');
         body.appendChild(button);
