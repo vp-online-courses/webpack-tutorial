@@ -13,10 +13,18 @@ module.exports = {
         publicPath: ''
     },
     mode: 'development',
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            minSize: 10000,
+            automaticNameDelimiter: '_'
+        }
+    },
     devServer: {
         contentBase: path.resolve(__dirname, './dist'),
         index: 'index.html',
-        port: 9000
+        port: 9000,
+        writeToDisk: true
     },
     module: {
         rules: [
@@ -61,14 +69,14 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'hello-world.html',
-            chunks: ['hello-world'],
+            chunks: ['hello-world', 'vendors_hello-world_kiwi'],
             title: 'Hello world',
             description: 'Hello world',
             template: 'src/page-template.hbs'
         }),
         new HtmlWebpackPlugin({
             filename: 'kiwi.html',
-            chunks: ['kiwi'],
+            chunks: ['kiwi', 'vendors_hello-world_kiwi'],
             title: 'Kiwi',
             description: 'Kiwi',
             template: 'src/page-template.hbs'
