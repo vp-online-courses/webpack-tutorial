@@ -31,6 +31,8 @@
   "dependencies": {
     "handlebars": "^4.7.2",
     "handlebars-loader": "^1.7.0",
+    "jquery2": "npm:jquery@^2.2.4",
+    "jquery3": "npm:jquery@^3.4.1",
     "lodash": "^4.17.15",
     "react": "^16.4.2"
   }
