@@ -32,12 +32,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
     "express": "^4.17.1",
     "handlebars": "^4.7.3",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
-    "popper.js": "^1.16.1",
-    "react": "^16.13.1"
+    "lodash": "^4.17.15"
   }
 }
