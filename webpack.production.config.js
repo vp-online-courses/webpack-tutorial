@@ -54,6 +54,15 @@ module.exports = {
                 use: [
                     'handlebars-loader'
                 ]
+            },
+            {
+                test: /\.pug$/,
+                use: {
+                    loader: 'pug-loader',
+                    options: {
+                        pretty: true
+                    }
+                }
             }
         ]
     },
@@ -65,7 +74,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Hello world',
             description: 'Hello world',
-            template: 'src/page-template.hbs'
+            template: 'src/page-template.pug',
+            minify: {
+                collapseWhitespace: false
+            }
         })
     ]
 };
