@@ -1,8 +1,6 @@
 import './hello-world-button.scss';
 
 class HelloWorldButton {
-    buttonCssClass = 'hello-world-button';
-
     render() {
         const button = document.createElement('button');
         const body = document.querySelector('body');
