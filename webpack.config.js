@@ -38,7 +38,7 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [ '@babel/env' ],
-                        plugins: [ 'transform-class-properties' ]
+                        plugins: [ '@babel/plugin-proposal-class-properties' ]
                     }
                 }
             }
