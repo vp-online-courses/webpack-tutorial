@@ -1,5 +1,5 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [ '@babel/env' ],
-                        plugins: [ 'transform-class-properties' ]
+                        plugins: [ '@babel/plugin-proposal-class-properties' ]
                     }
                 }
             },
@@ -58,7 +58,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin('dist'),
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: 'hello-world.html',
             chunks: ['hello-world'],
