@@ -1,7 +1,7 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -38,7 +38,7 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [ '@babel/env' ],
-                        plugins: [ 'transform-class-properties' ]
+                        plugins: [ '@babel/plugin-proposal-class-properties' ]
                     }
                 }
             }
