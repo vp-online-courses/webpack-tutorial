@@ -5,11 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
-    entry: './src/hello-world.js',
+    entry: './src/dashboard.js',
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, './dist'),
-        publicPath: 'http://localhost:9001/'
+        publicPath: 'http://localhost:9000/'
     },
     mode: 'production',
     optimization: {
@@ -22,26 +22,19 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
-                ]
-            },
-            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
                         presets: [ '@babel/env' ],
-                        plugins: [ '@babel/plugin-proposal-class-properties' ]
                     }
                 }
             },
             {
-                test: /\.hbs$/,
+                test: /\.scss$/,
                 use: [
-                    'handlebars-loader'
+                    MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
                 ]
             }
         ]
@@ -52,17 +45,14 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'hello-world.html',
-            title: 'Hello world',
-            description: 'Hello world',
-            template: 'src/page-template.hbs'
+            filename: 'dashboard.html',
+            title: 'Dashboard',
         }),
         new ModuleFederationPlugin({
-            name: 'HelloWorldApp',
-            filename: 'remoteEntry.js',
-            exposes: {
-                './HelloWorldButton': './src/components/hello-world-button/hello-world-button.js',
-                './HelloWorldPage': './src/components/hello-world-page/hello-world-page.js',
+            name: 'App',
+            remotes: {
+                HelloWorldApp: 'HelloWorldApp@http://localhost:9001/remoteEntry.js',
+                KiwiApp: 'KiwiApp@http://localhost:9002/remoteEntry.js'
             }
         })
     ]

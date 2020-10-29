@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar {
+    background: #5261b3;
+    margin: 0;
+
+    li {
+        
+    margin: 10px; 
+    padding: 10px; 
+    list-style: none; 
+    display: inline-block;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+        }
+    }
+}

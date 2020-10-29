@@ -6,9 +6,3 @@ heading.render('kiwi');
 const kiwiImage = new KiwiImage();
 kiwiImage.render();
 
-import('HelloWorldApp/HelloWorldButton')
-    .then(HelloWorldButtonModule => {
-        const HelloWorldButton = HelloWorldButtonModule.default;
-        const helloWorldButton = new HelloWorldButton();
-        helloWorldButton.render();
-    })
