@@ -6,33 +6,33 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.production.config.js",
-    "dev": "webpack-dev-server --config webpack.dev.config.js --hot",
+    "dev": "webpack serve --config webpack.dev.config.js --hot",
     "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.11.5",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^4.2.2",
-    "file-loader": "^6.1.0",
+    "css-loader": "^5.0.0",
+    "file-loader": "^6.2.0",
+    "handlebars": "^4.7.6",
     "handlebars-loader": "^1.7.1",
-    "html-webpack-plugin": "^4.4.1",
-    "mini-css-extract-plugin": "^0.11.0",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.1",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.2.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.0.5",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "handlebars": "^4.7.6",
     "lodash": "^4.17.20"
   }
 }
