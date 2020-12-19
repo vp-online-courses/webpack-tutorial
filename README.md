@@ -2,7 +2,7 @@
 
 This repository was designed to help you with learning Webpack.
 
-It is a supplementary resource to the course "Webpack 4: From Beginner To Advanced".
+It is a supplementary resource to the course "Webpack 5: The Complete Guide For Beginners".
 
 ## Clone This Repository
 
@@ -31,7 +31,8 @@ There are 2 special branches that you may want to check out:
 - multiple-page-application. Contains webpack configuration for a Multiple Page Application.
 
 
-*Please don't use the master branch.*
+#### Please don't use the master branch
+
 There are separate git branches in this repository related to each Lesson. They are usually named the same as the Lessons are named. For example, if you are watching Lesson 33 "How To Generate Multiple HTML Files", there are 2 branches related to this lesson:
 
 - how-to-generate-multiple-html-files-begin
