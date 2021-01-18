@@ -23,7 +23,12 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg)$/,
                 use: [
-                    'file-loader'
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[name].[ext]'
+                        }
+                    },
                 ]
             },
             {
@@ -61,7 +66,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'styles.[contenthash].css'
+            filename: 'css/styles.[contenthash].css'
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
