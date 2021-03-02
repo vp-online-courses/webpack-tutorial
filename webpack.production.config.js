@@ -2,9 +2,13 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        about: './src/about.js',
+    },
     output: {
         filename: 'bundle.[contenthash].js',
         path: path.resolve(__dirname, './dist'),
@@ -29,13 +33,13 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader, 'css-loader'
+                    ExtractCssChunks.loader, 'css-loader'
                 ]
             },
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    ExtractCssChunks.loader,
                     'css-loader',
                     {
                         loader: 'postcss-loader',
@@ -73,14 +77,19 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'styles.[contenthash].css'
-        }),
+        new ExtractCssChunks(),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
+            filename: 'some.html',
             title: 'Hello world',
             description: 'Hello world',
-            template: 'src/page-template.hbs'
+            template: 'src/page-template.hbs',
+            chunks: ['index']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: 'src/page-template.hbs',
+            chunks: ['about']
         })
     ]
 };
