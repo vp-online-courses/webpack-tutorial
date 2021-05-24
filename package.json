@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "file-loader": "^6.2.0",
-    "webpack": "^5.12.2",
-    "webpack-cli": "^4.3.1"
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
   }
 }
