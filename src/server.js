@@ -15,6 +15,12 @@ app.get('/kiwi/', function (req, res) {
     res.send(contentFromHtmlFile);
 });
 
+app.get('/all/', function (req, res) {
+    const pathToHtmlFile = path.resolve(__dirname, '../dist/all.html');
+    const contentFromHtmlFile = fs.readFileSync(pathToHtmlFile, 'utf-8');
+    res.send(contentFromHtmlFile);
+});
+
 app.use('/static', express.static(path.resolve(__dirname, '../dist')));
 
 app.listen(3000, function () {
