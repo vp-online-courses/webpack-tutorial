@@ -11,9 +11,14 @@ module.exports = {
     },
     mode: 'development',
     devServer: {
-        contentBase: path.resolve(__dirname, './dist'),
-        index: 'kiwi.html',
-        port: 9002
+        port: 9002,
+        static: {
+            directory: path.resolve(__dirname, './dist'),
+        },
+        devMiddleware: {
+            index: 'kiwi.html',
+            writeToDisk: true
+        }
     },
     module: {
         rules: [
