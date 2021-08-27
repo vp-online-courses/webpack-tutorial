@@ -12,9 +12,14 @@ module.exports = {
     },
     mode: 'development',
     devServer: {
-        contentBase: path.resolve(__dirname, './dist'),
-        index: 'hello-world.html',
-        port: 9001
+        port: 9001,
+        static: {
+            directory: path.resolve(__dirname, './dist'),
+        },
+        devMiddleware: {
+            index: 'hello-world.html',
+            writeToDisk: true
+        }
     },
     module: {
         rules: [
