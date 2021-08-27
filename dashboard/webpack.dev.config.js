@@ -12,9 +12,14 @@ module.exports = {
     },
     mode: 'development',
     devServer: {
-        contentBase: path.resolve(__dirname, './dist'),
-        index: 'dashboard.html',
         port: 9000,
+        static: {
+            directory: path.resolve(__dirname, './dist'),
+        },
+        devMiddleware: {
+            index: 'dashboard.html',
+            writeToDisk: true
+        },
         historyApiFallback: {
             index: 'dashboard.html'
         }
