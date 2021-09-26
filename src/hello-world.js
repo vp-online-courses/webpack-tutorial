@@ -3,7 +3,7 @@ import Heading from './components/heading/heading.js';
 import React from 'react';
 
 const heading = new Heading();
-heading.render();
+heading.render('hello world');
 const helloWorldButton = new HelloWorldButton();
 helloWorldButton.render();
 
