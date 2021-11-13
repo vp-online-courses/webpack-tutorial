@@ -6,7 +6,7 @@ It is a supplementary resource to the course "Webpack 5: The Complete Guide For 
 
 ## Clone This Repository
 
-1. ```git clone git@github.com:vp-online-courses/webpack-tutorial.git```
+1. ```git clone https://github.com/vp-online-courses/webpack-tutorial.git```
 1. ```cd webpack-tutorial```
 
 ## Branches
