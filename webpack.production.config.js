@@ -22,14 +22,10 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|jpg|jpeg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: 'images/[name].[ext]'
-                        }
-                    },
-                ]
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[hash][ext][query]'
+                }
             },
             {
                 test: /\.css$/,
