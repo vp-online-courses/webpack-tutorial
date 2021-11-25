@@ -11,17 +11,20 @@ module.exports = {
     },
     mode: 'development',
     devServer: {
-        contentBase: path.resolve(__dirname, './dist'),
-        index: 'index.html',
-        port: 9000
+        port: 9000,
+        static: {
+            directory: path.resolve(__dirname, './dist'),
+        },
+        devMiddleware: {
+            index: 'index.html',
+            writeToDisk: true
+        }
     },
     module: {
         rules: [
             {
-                test: /\.(png|jpg)$/,
-                use: [
-                    'file-loader'
-                ]
+                test: /\.(png|jpg|jpeg)$/,
+                type: 'asset/resource',
             },
             {
                 test: /\.css$/,
@@ -47,9 +50,9 @@ module.exports = {
                 }
             },
             {
-                test: /\.hbs$/,
+                test: /\.html$/,
                 use: [
-                    'handlebars-loader'
+                    'html-loader'
                 ]
             }
         ]
@@ -59,7 +62,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Hello world',
             description: 'Hello world',
-            template: 'src/page-template.hbs'
+            template: 'src/page-template.html'
         })
     ]
 };
