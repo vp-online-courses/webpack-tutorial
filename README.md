@@ -1,8 +1,10 @@
 ## Overview
 
-This repository was designed to help you with learning Webpack.
+This repository was designed to help you with learning Webpack 5.
 
-It is a supplementary resource to the course "Webpack 5: The Complete Guide For Beginners".
+This repository is a supplementary resource to the course ["Webpack 5: The Complete Guide For Beginners"](https://www.udemy.com/course/webpack-from-beginner-to-advanced/?referralCode=6348A0DAFB30D091F7F3).
+
+If you want to get a discount (up to 70%) on one of my other courses, feel free to send me an email at vp.online.courses@gmail.com, and I will try to get the best offer for you.
 
 ## Clone This Repository
 
