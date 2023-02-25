@@ -49,6 +49,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'dashboard.html',
             title: 'Dashboard',
+            template: 'src/page-template.hbs'
         }),
         new ModuleFederationPlugin({
             name: 'App',
