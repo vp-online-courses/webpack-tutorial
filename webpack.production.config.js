@@ -70,9 +70,15 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Hello world',
-            description: 'Hello world',
-            template: 'src/page-template.hbs'
+            template: 'src/main.hbs',
+            minify: false,
+            inject: false,
+            filename: 'views/main.ejs'
+        }),
+        new HtmlWebpackPlugin({
+            template: 'src/header.hbs',
+            minify: false,
+            filename: 'views/partials/header.ejs'
         })
     ]
 };

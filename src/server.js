@@ -4,11 +4,11 @@ const path = require('path');
 const fs = require('fs');
 
 app.use('/static', express.static(path.resolve(__dirname, '../dist')));
+app.set('views', './dist/views');
+app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-    const pathToHtmlFile = path.resolve(__dirname, '../dist/index.html');
-    const contentFromHtmlFile = fs.readFileSync(pathToHtmlFile, 'utf-8');
-    res.send(contentFromHtmlFile);
+    res.render('main', { title: 'Hello world', description: 'Hello world description' });
 });
 
 app.listen(3000, function () {

@@ -1,1 +1,1 @@
-This is a Readme file.
+Here you can find an example of using View Engine feature provided by Express framework in order to send HTML content to the browser.
