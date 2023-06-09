@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/vp-online-courses/webpack-tutorial#readme",
   "devDependencies": {
-    "webpack": "^5.12.2",
-    "webpack-cli": "^4.3.1"
+    "webpack": "^5.86.0",
+    "webpack-cli": "^5.1.4"
   }
 }
